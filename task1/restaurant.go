@@ -22,3 +22,12 @@ func (c *Chef) Cooking() {
 	time.Sleep(c.cookingTime * time.Second)
 	fmt.Printf("Шеф-повар %s завершил готовить блюдо.\n", c.name)
 }
+
+func Start() {
+	names := [3]string{"Vasya", "Alex", "Fedya"}
+	seconds := [3]time.Duration{2, 3, 1}
+
+	for i, name := range names {
+		go NewChef(name, seconds[i]).Cooking()
+	}
+}
