@@ -1,11 +1,12 @@
 package main
 
 import (
-	"lesson13/task1"
-	"lesson13/task2"
+	"lesson13/task3"
 )
 
 func main() {
-	task1.Start()
-	task2.Start()
+	// task1.Start()
+	// task2.Start()
+
+	task3.Start()
 }
